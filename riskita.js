@@ -1,20 +1,15 @@
-var bgColor = ["red","teal","gray"];
-var counter = 0;
 var iBg = iHead = iBody = iShoe = iAnimal = 1;
 var canvas, context;
-  var imageBg = new Image();
-  var imageHead = new Image();
-  var imageBody = new Image();
-  var imageShoe = new Image();
-  var imageAnimal = new Image();
-
-
-function prev (element) {
-  console.log("todo function"); }
+var imageBg = new Image();
+var imageHead = new Image();
+var imageBody = new Image();
+var imageShoe = new Image();
+var imageAnimal = new Image();
 
 function change (element, forward) {
   var counter;
-  var changing, selected;
+  var selected;
+
   switch (element) {
     case 1: counter = iBg; break;
     case 2: counter = iHead; break;
@@ -62,18 +57,13 @@ function change (element, forward) {
               context.drawImage(imageAnimal, 600, 350, 200, 200); };
             imageAnimal.src = 'img/'+selected+counter+'.jpg';
             iAnimal = counter;
-            break; }
-  changing = document.getElementById(selected);
-}
+            break; } }
 
 function init () {
   canvas = document.getElementById("canvas");
   context = canvas.getContext("2d");
-
-  change(1,1);
-}
+  change(1,1); }
 
 function save () {
-  var canvas = document.getElementById("canvas");
-  var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+  var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
   window.location.href=image; }

@@ -1,6 +1,14 @@
 body * { -webkit-user-select: none; }
 
-canvas {background: blue;}
+section {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  background: yellow; }
+
+canvas { background: blue; }
 
 button {
   z-index: 10;
