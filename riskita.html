@@ -2,87 +2,21 @@
 <html>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="riskita.css">
-<title>random</title>
-<style>
-body * { -webkit-user-select: none; }
-#bg {
-  position: relative;
-  height: 600px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: pink;
-  background-size: 100% 100%; }
-#title {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 200px;
-  width: 200px;
-  border: solid 3px red;
-  background: yellow; }
-#bgElement {
-  position: absolute;
-  top: 50px;
-  left: 600px;
-  height: 100px;
-  width: 100px;
-  border: solid 2px black;
-  background: transparent; }
-#head {
-  left: 425px;
-  top: 200px;
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  background: yellow; }
-#body {
-  position: absolute;
-  left: 400px;
-  top: 300px;
-  height: 200px;
-  width: 150px;
-  background: blue; }
-#shoe {
-  left: 425px;
-  top: 500px;
-  position: absolute;
-  height: 50px;
-  width: 100px;
-  background: green; }
-#animal {
-  position: absolute;
-  left: 600px;
-  top: 350px;
-  height: 200px;
-  width: 200px;
-  background: orange; }
-</style>
-<body>
-<section id="bg">
+<title>riskita</title>
+<body onload="init()">
+<canvas id="canvas" height="600" width="1000"></canvas>
 
-<section id="title">Naslov</title>
-  <section id="bgElement" onclick="next(1)"></section>
-  <section id="head" onclick="next(2)"></section>
-  <section id="body" onclick="next(3)"></section>
-  <section id="shoe" onclick="next(4)"></section>
-  <section id="animal" onclick="next(5)"></section>
-</section>
+<button class="bgl" onclick="change(1,0)">&#60;</button>
+<button class="bgr" onclick="change(1,1)">&#62;</button>
+<button class="hl" onclick="change(2,0)">&#60;</button>
+<button class="hr" onclick="change(2,1)">&#62;</button>
+<button class="bl" onclick="change(3,0)">&#60;</button>
+<button class="br" onclick="change(3,1)">&#62;</button>
+<button class="sl" onclick="change(4,0)">&#60;</button>
+<button class="sr" onclick="change(4,1)">&#62;</button>
+<button class="al" onclick="change(5,0)">&#60;</button>
+<button class="ar" onclick="change(5,1)">&#62;</button>
+<button class="save" onclick="save()">save</button>
 
-<script>
-var bgColor = ["red","teal","gray"];
-var bgCounter = 1;
-var counter = 0;
-
-function next (element) {
-  var changing, selected;
-  if (++counter > 5) { counter = 1; }
-  switch (element) {
-    case 1: selected = "bg"; break;
-    case 2: selected = "head"; break;
-    case 3: selected = "body"; break;
-    case 4: selected = "shoe"; break;
-    case 5: selected = "animal"; break; }
-  changing = document.getElementById(selected);
-  changing.style.backgroundImage = "url('img/"+selected+counter+".jpg')"; }
-</script>
+<script src="riskita.js"></script>
 </body></html>

@@ -1,0 +1,40 @@
+body * { -webkit-user-select: none; }
+
+canvas {background: blue;}
+
+button {
+  z-index: 10;
+  position: absolute; }
+.bgl {
+  top: 70px;
+  left: 800px; }
+.bgr {
+  top: 70px;
+  left: 900px; }
+.hl {
+  top: 250px;
+  left: 425px; }
+.hr {
+  top: 250px;
+  left: 525px; }
+.bl {
+  top: 400px;
+  left: 400px; }
+.br {
+  top: 400px;
+  left: 550px; }
+.sl {
+  top: 525px;
+  left: 425px; }
+.sr {
+  top: 525px;
+  left: 525px; }
+.al {
+  top: 450px;
+  left: 600px; }
+.ar {
+  top: 450px;
+  left: 800px; }
+.save {
+  top: 500px;
+  left: 200px; }
